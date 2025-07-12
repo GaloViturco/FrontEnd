@@ -13,7 +13,7 @@ function AgendarCita() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/agendar-cita', {
+      const response = await fetch('http://54.173.45.60:8001/agendar-cita', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fecha, hora }),
