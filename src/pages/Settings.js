@@ -26,7 +26,7 @@ function Settings() {
   // Función para cambiar el email
   const handleEmailChange = async () => {
     try {
-      const res = await fetch('http://50.17.170.185/api/changeuser', {
+      const res = await fetch('http://54.144.95.86:4568/change-email', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ oldEmail: email, newEmail })
@@ -46,7 +46,7 @@ function Settings() {
 
   const handlePasswordChange = async () => {
     try {
-      const res = await fetch('http://50.17.170.185/api/changepass', {
+      const res = await fetch('http://54.144.95.86:4567/change-password', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, oldPassword, newPassword })
@@ -79,7 +79,7 @@ function Settings() {
     const confirmDelete = window.confirm('¿Estás seguro de que deseas eliminar tu cuenta? Esta acción es irreversible.');
     if (confirmDelete) {
       try {
-        const res = await fetch(`http://50.17.170.185:4569/delete_user?email=${email}`, {  // Se agrega el parámetro 'email' a la URL
+        const res = await fetch(`http://54.144.95.86:4569/delete_user?email=${email}`, {  // Se agrega el parámetro 'email' a la URL
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -149,27 +149,6 @@ function Settings() {
         <button onClick={handlePasswordChange}>Actualizar Contraseña</button>
       </div>
 
-      {/* Sección para actualizar la frase de estado */}
-      <div className="form-section">
-        <h3>Actualizar frase de estado</h3>
-        <input
-          type="text"
-          placeholder="¿En qué estás pensando?"
-          onChange={(e) => setPhrase(e.target.value)}
-        />
-        <button onClick={handlePhraseUpdate}>Guardar frase</button>
-      </div>
-
-      {/* Sección para actualizar la descripción */}
-      <div className="form-section">
-        <h3>Actualizar descripción</h3>
-        <textarea
-          placeholder="Escribe una pequeña descripción sobre ti"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <button onClick={handleDescriptionUpdate}>Guardar descripción</button>
-      </div>
 
       {/* Botón para eliminar la cuenta */}
       <div className="form-section">
