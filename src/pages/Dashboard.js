@@ -60,6 +60,10 @@ function Dashboard() {
     navigate('/schedule-appointment'); // Redirige a la página para agendar una cita
   };
 
+  const handleViewAppointments = () => {
+    navigate('/view-appointments'); // Redirige a la página donde el usuario puede ver sus citas
+  };
+
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
@@ -83,6 +87,9 @@ function Dashboard() {
       <div className="chat-button-container">
         <button onClick={handleScheduleAppointment} className="form-button">
           Agendar cita
+        </button>
+        <button onClick={handleViewAppointments} className="form-button">
+          Ver citas
         </button>
       </div>
     </div>
