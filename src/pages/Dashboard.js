@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';  // Asegúrate de importar 'useEffect'
+import jwtDecode from 'jwt-decode';  // Importa 'jwtDecode'
 import './Dashboard.css';
 
 function Dashboard() {
