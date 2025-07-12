@@ -1,21 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode';
+import { useNavigate } from 'react-router-dom'; // Asegúrate de importar esto
 
 function AgendarCita() {
   const navigate = useNavigate();
-  const token = localStorage.getItem('token');
-  let email = '';
-  
-  if (token) {
-    try {
-      const decoded = jwtDecode(token);
-      email = decoded.email;
-    } catch (err) {
-      console.error('Token inválido');
-    }
-  }
-
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
   const [mensaje, setMensaje] = useState('');
@@ -27,13 +14,27 @@ function AgendarCita() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    
+    // Obtener el token del localStorage
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setMensaje('No se encontró un token de autenticación.');
+      setIsLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch('http://54.173.45.60:8001/agendar-cita', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,  // Enviar el token JWT en los encabezados
+        },
         body: JSON.stringify({ fecha, hora }),
       });
+
       const data = await response.json();
+
       if (data.success) {
         setMensaje('Cita agendada con éxito');
       } else {
