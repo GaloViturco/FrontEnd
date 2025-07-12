@@ -35,8 +35,8 @@ jobs:
         username: ec2-user
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker stop galo12 || true
-          docker rm galo12 || true
+          docker stop galo12/my-react-app || true
+          docker rm galo12/my-react-app || true
 
           docker pull galo12/my-react-app
 
