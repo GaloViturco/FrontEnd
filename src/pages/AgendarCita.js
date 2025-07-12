@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 
 function AgendarCita() {
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token');
+  let email = '';
+  
+  if (token) {
+    try {
+      const decoded = jwtDecode(token);
+      email = decoded.email;
+    } catch (err) {
+      console.error('Token inválido');
+    }
+  }
+
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
   const [mensaje, setMensaje] = useState('');
