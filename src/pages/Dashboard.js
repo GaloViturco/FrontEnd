@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Asegúrate de importar esto
 import { jwtDecode } from 'jwt-decode';
 import './Dashboard.css';
 
@@ -28,11 +28,11 @@ function Dashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    navigate('/');
+    navigate('/'); // Redirige al login o página principal
   };
 
   const goToSettings = () => {
-    navigate('/settings');
+    navigate('/settings'); // Redirige a la página de configuraciones
   };
 
   const handleImageUpload = async (e) => {
