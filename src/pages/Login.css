@@ -1,65 +1,91 @@
+/* Login.css */
+
+/* Fondo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/assets/images/barbero.jpg');  /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor principal */
 .login-container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3f4f6;
 }
 
+/* Caja de login */
 .login-box {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo blanco translúcido */
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Título del login */
 .login-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+  font-size: 24px;
   text-align: center;
-  color: #1f2937;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
+/* Estilo de los inputs */
 .login-input {
   width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
+/* Botón de login */
 .login-button {
   width: 100%;
-  padding: 0.75rem;
-  background-color: #2563eb;
-  color: white;
-  font-weight: 600;
+  padding: 12px;
+  background-color: #d9534f; /* Rojo barbería */
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-  background-color: #1e40af;
+  background-color: #c9302c; /* Rojo más oscuro */
 }
 
+/* Estilo de los links */
 .login-footer {
-  margin-top: 1rem;
   text-align: center;
-  font-size: 0.875rem;
-  color: #6b7280;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 .login-link {
-  color: #2563eb;
+  color: #d9534f; /* Rojo barbería */
   text-decoration: none;
 }
 
 .login-link:hover {
   text-decoration: underline;
+}
+
+/* Estilo del captcha */
+.login-input {
+  margin-top: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
 }
