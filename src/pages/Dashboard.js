@@ -8,6 +8,24 @@ function Dashboard() {
   const token = localStorage.getItem('token');
   const [email, setEmail] = useState('');
   const [profilePic, setProfilePic] = useState(null);
+  const [currentTime, setCurrentTime] = useState(''); // Estado para la hora
+
+  // Obtener la hora del microservicio
+  useEffect(() => {
+    const fetchCurrentTime = async () => {
+      try {
+        const response = await fetch('http://54.144.95.86:5001/current-time');
+        const data = await response.json();
+        if (data && data.current_time) {
+          setCurrentTime(data.current_time);
+        }
+      } catch (error) {
+        console.error('Error al obtener la hora:', error);
+      }
+    };
+
+    fetchCurrentTime();
+  }, []);
 
   // Obtener el email del token
   useEffect(() => {
@@ -80,8 +98,16 @@ function Dashboard() {
           )}
         </div>
         <input type="file" accept="image/*" onChange={handleImageUpload} />
-
         <p className="dashboard-email">{email}</p>
+      </div>
+
+      {/* Mostrar la hora */}
+      <div className="current-time">
+        {currentTime ? (
+          <p className="current-time-text">Hora actual: {currentTime}</p>
+        ) : (
+          <p className="current-time-text">Cargando hora...</p>
+        )}
       </div>
 
       <div className="chat-button-container">

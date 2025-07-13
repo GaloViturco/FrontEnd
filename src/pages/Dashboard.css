@@ -1,3 +1,5 @@
+/* Dashboard.css */
+
 .dashboard-container {
   background-size: cover;
   background-position: center;
@@ -20,7 +22,7 @@
 }
 
 .header-button {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -32,18 +34,18 @@
 }
 
 .header-button:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Efecto hover */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dashboard-profile {
   text-align: center;
-  margin-top: 100px; /* Ajusta según sea necesario */
+  margin-top: 100px;
 }
 
 .profile-picture-placeholder {
-  background-color: rgba(255, 255, 255, 0.3); /* Fondo con transparencia */
-  width: 150px; /* Hacer la imagen más grande */
-  height: 150px; /* Hacer la imagen más grande */
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
   display: flex;
@@ -58,6 +60,18 @@
   margin-top: 10px;
 }
 
+.current-time {
+  margin-top: 20px;
+}
+
+.current-time-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .chat-button-container {
   display: flex;
   flex-direction: column;
@@ -66,7 +80,7 @@
 }
 
 .form-button {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -79,5 +93,5 @@
 }
 
 .form-button:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Efecto hover */
+  background-color: rgba(0, 0, 0, 0.8);
 }
