@@ -58,7 +58,7 @@ function Dashboard() {
     if (!file) return;
 
     const fileName = `profile_pics/${Date.now()}-${file.name}`;
-    const s3URL = `https://chatapp-profile-photos-kamartinez.s3.amazonaws.com/${fileName}`;
+    const s3URL = `https://bucketgalo123.s3.amazonaws.com/${fileName}`;
 
     try {
       await fetch(s3URL, {
