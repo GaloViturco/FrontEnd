@@ -44,14 +44,14 @@ function Login() {
   };
 
   return (
-    <div>
-      <div>
-        {/* Logo GIF arriba */}
-        <div className="login-logo">
-          <img src="logo.gif" alt="Logo Barbería" width={25} height={25} />
-        </div>
+    <div className="login-container">
+      {/* Logo fuera del contenedor del formulario */}
+      <div className="login-logo">
+        <img src="logo.gif" alt="Logo Barbería" className="logo-image" />
+      </div>
 
-        <h2 className="login-title">Iniciar sesión </h2>
+      <div className="login-box">
+        <h2 className="login-title">Iniciar sesión</h2>
 
         <input
           type="text"
