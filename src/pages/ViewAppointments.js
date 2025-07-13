@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './ViewAppointments.css';  // Asegúrate de importar el archivo CSS
 
 function ViewAppointments() {
   const [appointments, setAppointments] = useState([]);

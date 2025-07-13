@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Asegúrate de importar esto
+import { useNavigate } from 'react-router-dom';
+import './AgendarCita.css';  // Asegúrate de importar el archivo CSS
 
 function AgendarCita() {
   const navigate = useNavigate();
