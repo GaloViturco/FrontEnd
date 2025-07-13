@@ -48,7 +48,7 @@ function Login() {
       <div className="login-box">
         {/* Logo GIF arriba */}
         <div className="login-logo">
-          <img src="logo.gif" alt="Logo Barbería" width={150} height={150} />
+          <img src="logo.gif" alt="Logo Barbería" width={25} height={25} />
         </div>
 
         <h2 className="login-title">Iniciar sesión </h2>
