@@ -5,7 +5,9 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 import AgendarCita from './pages/AgendarCita';
-import ViewAppointments from './pages/ViewAppointments';  // Asegúrate de importar la nueva página
+import ViewAppointments from './pages/ViewAppointments';
+import RootDashboard from './pages/RootDashboard';
+import RootLogin from './pages/RootLogin';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/schedule-appointment" element={<AgendarCita />} />
-        <Route path="/view-appointments" element={<ViewAppointments />} />  {/* Nueva ruta para ver citas */}
+        <Route path="/view-appointments" element={<ViewAppointments />} />
+        <Route path="/root-dashboard" element={<RootDashboard />} />
+        <Route path="/root-login" element={<RootLogin />} />
       </Routes>
     </Router>
   );
