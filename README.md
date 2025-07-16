@@ -1,6 +1,6 @@
 # Barber Shop Appointment System Frontend 🚀
 
-Welcome to the Barber Shop Appointment System Frontend repository! This project serves as the user interface for a barber shop's scheduling and booking system. With this system, clients can easily schedule appointments, view available slots, and manage their bookings in a seamless manner.
+Welcome to the Barber Shop Appointment System Frontend repository! This project serves as the user interface for a barber shop's scheduling and booking system. With this system, clients can easily schedule appointments, view available slots, and manage their bookings in a seamless manner..
 
 ## Description 📅
 
